@@ -17,6 +17,7 @@
         "swiper": "^11.0.5",
         "url": "^0.11.3",
         "vue": "^3.4.5",
-        "vue-router": "^4.2.5"
+        "vue-router": "^4.2.5",
+        "vue3-marquee": "^4.2.0-beta.1"
     }
 }

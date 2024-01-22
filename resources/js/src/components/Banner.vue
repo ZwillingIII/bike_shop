@@ -35,6 +35,17 @@
                         </div>
                     </div>
                 </SwiperSlide>
+                <SwiperSlide>
+                    <div class="banner-item">
+                        <div class="container">
+                            <div class="banner-item__wrap">
+                                <div class="banner-title">
+                                    Тест тест
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
             </Swiper>
         </div>
     </div>
@@ -50,13 +61,13 @@ import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
 export default {
     components: {
-        Swiper,
-        SwiperSlide
+      Swiper,
+      SwiperSlide
     },
     setup() {
-        return {
-            modules: [Pagination],
-        }
+      return {
+        modules: [Pagination],
+      }
     }
 }
 </script>

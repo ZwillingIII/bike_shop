@@ -20,6 +20,10 @@ export default defineConfig({
             {
                 find: '@fonts',
                 replacement: fileURLToPath(new URL('./public/fonts', import.meta.url))
+            },
+            {
+                find: '@img',
+                replacement: fileURLToPath(new URL('./public/img', import.meta.url))
             }
         ]
     }
