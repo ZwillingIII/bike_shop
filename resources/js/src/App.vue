@@ -24,6 +24,15 @@ body
     margin: 0 auto
     position: relative
 
+.btn-a
+  font-size: 16px
+  font-style: normal
+  font-weight: 500
+  line-height: 123%
+  color: #F57520
+  &:hover
+    color: #fff
+
 </style>
 
 <script>
