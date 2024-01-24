@@ -33,6 +33,21 @@ body
   &:hover
     color: #fff
 
+.grey-back
+  background: #F8F8F8
+
+.section-title
+  font-size: 64px
+  font-style: normal
+  font-weight: 400
+  line-height: 123%
+  letter-spacing: 3.2px
+
+.green
+  color: #4D932C
+.red
+  color: #F53A20
+
 </style>
 
 <script>

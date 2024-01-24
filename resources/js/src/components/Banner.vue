@@ -6,6 +6,10 @@
                 :modules="modules"
                 :loop="true"
                 :pagination="true"
+                :autoplay="{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }"
             >
                 <SwiperSlide>
                     <div class="banner-item">
@@ -54,7 +58,7 @@
 
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -66,7 +70,7 @@ export default {
     },
     setup() {
       return {
-        modules: [Pagination],
+        modules: [Pagination,Autoplay],
       }
     }
 }
