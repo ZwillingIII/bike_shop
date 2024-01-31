@@ -40,12 +40,16 @@
 
 <style lang="sass">
 .card
+  &__country
+    img
+      border-top-left-radius: 10px
   position: relative
   height: fit-content
   background: #fff
   border-radius: 10px
   transition: all 0.3s
   z-index: 2
+  min-height: 443px
   &-wrap
     height: 443px
   &__price

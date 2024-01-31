@@ -6,4 +6,8 @@ const router = createRouter({
     routes
 });
 
+router.beforeEach((to, from) => {
+  document.title = to.meta?.title ?? "Велоспорт"
+});
+
 export default router;
