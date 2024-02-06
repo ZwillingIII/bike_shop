@@ -11,13 +11,7 @@
       </div>
     </div>
   </div>
-<!--  <div class="benefits-video">-->
 
-<!--  </div>-->
-<!--  <vue-plyr ref="benefits-video">-->
-<!--    <div data-plyr-provider="youtube" data-plyr-embed-id="D5_xsiO7vfw"></div>-->
-<!--  </vue-plyr>-->
-<!--  <video-player :options="videoOptions" />-->
   <video-player :options="videoOptions" />
 
   <benefit-points />

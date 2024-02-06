@@ -45,10 +45,26 @@ export default {
 <style lang="sass">
 .benefit-points
   background-color: #2E2E2E
+  padding: 36px 0
   &__items
     display: flex
+    gap: 44px
   &__item
     color: #fff
+    display: flex
+    flex-direction: column
+    gap: 24px
     &-top
       display: flex
+      align-items: center
+      gap: 16px
+    &-title
+      font-size: 20px
+      font-weight: 500
+      line-height: 1.6
+      white-space: nowrap
+  &__desc
+    font-size: 16px
+    max-width: 237px
+    line-height: 1.6
 </style>
