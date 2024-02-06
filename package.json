@@ -13,9 +13,11 @@
     },
     "dependencies": {
         "@vitejs/plugin-vue": "^5.0.2",
+        "pug": "^3.0.2",
         "sass": "^1.69.7",
         "swiper": "^11.0.5",
         "url": "^0.11.3",
+        "video.js": "^8.10.0",
         "vue": "^3.4.5",
         "vue-router": "^4.2.5",
         "vue3-marquee": "^4.2.0-beta.1"

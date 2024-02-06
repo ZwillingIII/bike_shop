@@ -39,14 +39,26 @@ body
 .section-title
   font-size: 64px
   font-style: normal
-  font-weight: 400
+  font-weight: 600
   line-height: 123%
   letter-spacing: 3.2px
+  width: 50%
+  &__desc
+    font-size: 16px
+    font-weight: 400
+    width: 35%
+    line-height: 25px
+    display: flex
+    flex-direction: column
+    &-more
+      margin-top: 30px
 
 .green
   color: #4D932C
 .red
   color: #F53A20
+.grey-btn
+  color: #B3B3B3
 
 </style>
 
