@@ -49,6 +49,7 @@ export default {
   &__items
     display: flex
     gap: 44px
+    justify-content: center
   &__item
     color: #fff
     display: flex
