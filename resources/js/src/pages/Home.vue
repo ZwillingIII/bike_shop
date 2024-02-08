@@ -5,6 +5,7 @@
   <NewsProducts />
   <Catalog />
   <Benefits />
+  <news />
 </template>
 
 <script>
@@ -14,6 +15,7 @@ import QuickSect from "@/src/components/QuickSect.vue";
 import NewsProducts from "@/src/components/NewsProducts.vue";
 import Catalog from "@/src/components/MainCatalogSect.vue";
 import Benefits from "@/src/components/Benefits.vue";
+import News from "@/src/components/News.vue";
 export default {
   components: {
     Banner,
@@ -21,7 +23,8 @@ export default {
     QuickSect,
     NewsProducts,
     Catalog,
-    Benefits
+    Benefits,
+    News
   }
 }
 </script>
