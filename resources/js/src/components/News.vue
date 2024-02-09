@@ -73,6 +73,7 @@ export default {
 <style lang="sass">
 .articles
   padding: 160px 0
+  overflow: hidden
   &__items
     margin-top: 80px
   &__slide

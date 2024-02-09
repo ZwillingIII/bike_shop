@@ -6,6 +6,7 @@
   <Catalog />
   <Benefits />
   <news />
+  <Contacts />
 </template>
 
 <script>
@@ -16,6 +17,7 @@ import NewsProducts from "@/src/components/NewsProducts.vue";
 import Catalog from "@/src/components/MainCatalogSect.vue";
 import Benefits from "@/src/components/Benefits.vue";
 import News from "@/src/components/News.vue";
+import Contacts from "@/src/components/Contacts.vue";
 export default {
   components: {
     Banner,
@@ -24,7 +26,8 @@ export default {
     NewsProducts,
     Catalog,
     Benefits,
-    News
+    News,
+    Contacts
   }
 }
 </script>
