@@ -1,6 +1,7 @@
 <template>
-    <Header />
-    <router-view />
+  <Header />
+  <router-view />
+  <Footer />
 </template>
 
 <style lang="sass">
@@ -42,6 +43,7 @@ body
   font-weight: 600
   line-height: 123%
   letter-spacing: 3.2px
+  text-transform: uppercase
   width: 50%
   &__desc
     font-size: 16px
@@ -60,15 +62,67 @@ body
 .grey-btn
   color: #B3B3B3
 
+.form
+  &__input
+    padding: 10px 16px 10px 16px
+    font-size: 16px
+    font-weight: 400
+    border-radius: 5px
+    outline: none
+    border: 0px
+    &::placeholder
+      color: #b3b3b3
+  &__submit
+    background: #f57520
+    border-radius: 5px
+    color: #fff
+    padding: 13px 37px
+    outline: none
+    border: none
+  &__checkbox
+    position: relative
+    &-input
+      &:checked
+        & ~ .form__checkmark
+          background-color: #f57520
+          &:after
+            opacity: 1
+  &__checkmark
+    position: absolute
+    top: 0
+    left: 0
+    height: 20px
+    width: 20px
+    background-color: #eee
+    transition: background-color 0.25s ease
+    border-radius: 4px
+    &:after
+      content: ""
+      position: absolute
+      left: 6px
+      top: 2px
+      width: 5px
+      height: 10px
+      border: solid #fff
+      border-width: 0 2px 2px 0
+      transform: rotate(45deg)
+      opacity: 0
+      transition: opacity 0.25s ease
+
+.privacy-err
+  color: #f5391f
+  transition: all 0.3s
 </style>
 
 <script>
 import Header from "@/src/components/Header.vue";
+import Footer from "@/src/components/Footer.vue";
 
 export default {
-    name: "App",
-    components: {
-        Header,
-    }
+  name: "App",
+  components: {
+    Header,
+    Footer
+  }
 }
 </script>

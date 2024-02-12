@@ -11,8 +11,8 @@
       :coordinates="coords"
       :marker-id="0"
     )
-      template
-        img(:src="marker")
+
+  contact-data
 </template>
 
 <style scoped lang="sass">
@@ -23,13 +23,18 @@
 </style>
 
 <script>
+// Plugins
 import { YandexMap, YandexMarker } from "vue-yandex-maps";
+
+// Components
+import ContactData from "@/src/components/ContactData.vue";
 
 export default {
   name: 'Contacts',
   components: {
     YandexMap,
-    YandexMarker
+    YandexMarker,
+    ContactData
   },
   data() {
     return {
