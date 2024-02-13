@@ -45,7 +45,7 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="header-burger">
+                    <div class="header-burger" @click="showMenu">
                         <span class="header-burger__line header-burger_frs"></span>
                         <span class="header-burger__line header-burger_other"></span>
                         <span class="header-burger__line header-burger_other"></span>
@@ -58,15 +58,25 @@
 
 <script>
 import Logo from "@svg/logo.svg";
+import { inject } from 'vue';
 
 export default {
-    data() {
-        return {
-            logo: Logo,
-            favoriteCount: true,
-            cardCount: false
-        }
+  data() {
+    return {
+      logo: Logo,
+      favoriteCount: true,
+      cardCount: false
     }
+  },
+  created() {
+
+  },
+  methods: {
+    showMenu() {
+      const eventBus = inject('eventBus');
+      eventBus.$emit('openModal', {event: 'menu'});
+    }
+  }
 }
 </script>
 

@@ -1,4 +1,20 @@
+<script>
+import Header from "@/src/components/Header.vue";
+import Footer from "@/src/components/Footer.vue";
+import Modals from "@/src/components/Modals.vue";
+
+export default {
+  name: "App",
+  components: {
+    Header,
+    Footer,
+    Modals
+  }
+}
+</script>
+
 <template>
+  <Modals />
   <Header />
   <router-view />
   <Footer />
@@ -113,16 +129,3 @@ body
   color: #f5391f
   transition: all 0.3s
 </style>
-
-<script>
-import Header from "@/src/components/Header.vue";
-import Footer from "@/src/components/Footer.vue";
-
-export default {
-  name: "App",
-  components: {
-    Header,
-    Footer
-  }
-}
-</script>

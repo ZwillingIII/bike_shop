@@ -32,7 +32,7 @@ export default {
     Benefits,
     News,
     Contacts,
-    FooterForm
+    FooterForm,
   }
 }
 </script>
