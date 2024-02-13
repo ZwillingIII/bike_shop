@@ -20,7 +20,7 @@ export default {
         .footer__column
           .footer__logo
             img( :src="logo" )
-          .footer__info-text Компания World-bikes специализируется на продаже товаров для велосипедного спорта.
+          .footer__column-text Компания World-bikes<br /> специализируется на продаже<br /> товаров для велосипедного спорта.
         .footer__column
           .footer__column-title Каталог
           .footer__column-items
@@ -64,8 +64,33 @@ export default {
   color: #fff
   a
     color: #fff
+    transition: all 0.3s
+    &:hover
+      color: #f57520
   &__top
     display: flex
     justify-content: space-between
     padding: 102px 0 40px 0
+    gap: 90px
+  &__column
+    &-title
+      font-size: 24px
+      font-weight: 500
+    &-items
+      display: flex
+      flex-direction: column
+      gap: 16px
+      margin-top: 32px
+    &-text
+      margin-top: 64px
+      line-height: 1.6
+      font-size: 16px
+    &-item
+      display: flex
+      gap: 16px
+      font-size: 16px
+      &_content
+        display: flex
+        flex-direction: column
+        line-height: 1.6
 </style>
