@@ -45,8 +45,9 @@ export default {
   flex-direction: column
   justify-content: center
   gap: 40px
-  padding: 25px
+  padding: 25px 35px 55px 35px
   opacity: 0
+  border-radius: 10px
   &.active
     visibility: visible
     opacity: 1
