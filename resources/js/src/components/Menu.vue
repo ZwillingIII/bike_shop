@@ -8,14 +8,22 @@ export default {
   },
   props: [
     'menu'
-  ]
+  ],
+  methods: {
+    closeModal() {
+      this.$emitter.emit('open-menu', {
+        menu: false,
+        bg: false
+      })
+    }
+  }
 }
 </script>
 
 <template lang="pug">
 .menu( :class="{ active: menu }" )
   .menu-wrap
-    .menu-close
+    .menu-close( @click="closeModal" )
       img( :src="close" )
     .menu-title Доп. информация
     .menu-items

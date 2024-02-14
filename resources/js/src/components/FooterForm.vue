@@ -10,7 +10,6 @@ export default {
   },
   methods: {
     submit(e) {
-      e.preventDefault();
       if (this.privacy) {
         console.log('Success');
       } else {
@@ -29,10 +28,10 @@ export default {
   .container
     .footer-form__wrap
       .footer-form__title Подпишитесь на наши новости
-      form.footer-form__form(  )
+      form.footer-form__form( @submit.prevent="submit", @keyup.alt.enter="submit" )
         .footer-form__inputs
           input.form__input.footer-form__input( placeholder="E-mail", v-model="mail" )
-          button.form__submit( type="submit", @click="submit" ) Подписаться
+          button.form__submit( type="submit" ) Подписаться
         .footer-form__privacy
           label( for="footer-form__checkbox", @click="checkbox" )
             .form__checkbox

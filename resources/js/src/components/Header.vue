@@ -58,7 +58,6 @@
 
 <script>
 import Logo from "@svg/logo.svg";
-import { inject } from 'vue';
 
 export default {
   data() {
@@ -73,8 +72,10 @@ export default {
   },
   methods: {
     showMenu() {
-      const eventBus = inject('eventBus');
-      eventBus.$emit('openModal', {event: 'menu'});
+      this.$emitter.emit('open-menu', {
+        menu: true,
+        bg: true
+      })
     }
   }
 }

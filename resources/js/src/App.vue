@@ -9,7 +9,7 @@ export default {
     Header,
     Footer,
     Modals
-  }
+  },
 }
 </script>
 

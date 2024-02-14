@@ -1,6 +1,5 @@
 <script>
 import Menu from "@/src/components/Menu.vue";
-import { inject, onMounted, onUnmounted } from 'vue';
 export default {
   name: "Modals",
   components: {
@@ -12,34 +11,36 @@ export default {
       menu: false,
     }
   },
-  setup() {
-    const eventBus = inject('eventBus');
-    // this.$emit('open-modal', (evt) => {
-    //   console.log(1)
-    // })
-    onMounted(() => {
-      eventBus.$on('openModal', (data) => {
-        console.log(data)
-      });
-    });
-
-    onUnmounted(() => {
-      eventBus.$off('openModal');
-    });
-  },
   methods: {
     openMenu() {
       // this.show = true;
       // this.menu = true;
       console.log(1)
+    },
+    closeModal() {
+      this.$emitter.emit('open-menu', {
+        bg: false,
+        menu: false,
+      })
     }
-  }
+  },
+  created() {
+    this.$emitter.on('open-menu', (evt) => {
+      this.show = evt.bg;
+      this.menu = evt.menu;
+      if (evt.bg) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'auto';
+      }
+    })
+  },
 }
 </script>
 
 <template lang="pug">
   Menu( :menu="menu" )
-  .modal-bg( :class="{ active: show }" )
+  .modal-bg( :class="{ active: show }", @click="closeModal" )
 </template>
 
 <style scoped lang="sass">
