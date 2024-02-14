@@ -23,8 +23,8 @@ export default {
 <template lang="pug">
 .menu( :class="{ active: menu }" )
   .menu-wrap
-    .menu-close( @click="closeModal" )
-      img( :src="close" )
+    .menu-close
+      img( :src="close", @click="closeModal" )
     .menu-title Доп. информация
     .menu-items
       a.menu-item О нас

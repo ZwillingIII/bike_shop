@@ -12,6 +12,11 @@ export default {
     submit(e) {
       if (this.privacy) {
         console.log('Success');
+        this.$emitter.emit('open-res', {
+          text: 'Благодарим за подписку',
+          bg: true,
+          check: true,
+        })
       } else {
         this.checkPrivacy = false;
       }
