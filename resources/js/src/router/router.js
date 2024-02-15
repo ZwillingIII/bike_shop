@@ -7,7 +7,7 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from) => {
-  document.title = to.meta?.title ?? "Велоспорт"
+  document.title = to.meta?.title ?? "WB"
 });
 
 export default router;

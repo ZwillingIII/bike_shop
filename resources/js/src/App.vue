@@ -10,6 +10,9 @@ export default {
     Footer,
     Modals
   },
+  data() {
+    return {}
+  },
 }
 </script>
 

@@ -1,20 +1,20 @@
 <template>
-    <div class="header">
+    <div class="header" :class="{ 'header-black': route }">
         <div class="container">
             <div class="header-wrap">
                 <div class="header-left">
-                    <a href="/">
+                    <router-link to="/">
                         <img :src="logo" alt="">
-                    </a>
+                    </router-link>
                 </div>
                 <div class="header-right">
                     <div class="header-menu">
-                        <a>trade in</a>
-                        <a>велосипеды</a>
-                        <a>запчасти</a>
-                        <a>экипировка</a>
-                        <a>аксессуары</a>
-                        <a>велостанки</a>
+                        <router-link to="">trade in</router-link>
+                        <router-link to="/catalog">велосипеды</router-link>
+                        <router-link to="">запчасти</router-link>
+                        <router-link to="">экипировка</router-link>
+                        <router-link to="">аксессуары</router-link>
+                        <router-link to="">велостанки</router-link>
                     </div>
                     <div class="header-actions">
                         <div class="header-action">
@@ -64,11 +64,18 @@ export default {
     return {
       logo: Logo,
       favoriteCount: true,
-      cardCount: false
+      cardCount: false,
+      route: false
     }
   },
-  created() {
-
+  async created() {
+    this.$watch(
+      () => this.$route.name,
+      async () => {
+        if (this.$route.name != 'main') this.route = true
+        else this.route = false
+      }
+    )
   },
   methods: {
     showMenu() {
@@ -85,6 +92,8 @@ export default {
 .header
     position: relative
     z-index: 2
+    &-black
+      background-color: #000
     &-wrap
         display: flex
         justify-content: space-between

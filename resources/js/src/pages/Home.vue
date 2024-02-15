@@ -1,15 +1,3 @@
-<template>
-  <Banner />
-  <QuickSect />
-  <Brands />
-  <NewsProducts />
-  <Catalog />
-  <Benefits />
-  <news />
-  <Contacts />
-  <FooterForm />
-</template>
-
 <script>
 // Components
 import Banner from "@/src/components/Banner.vue";
@@ -36,6 +24,18 @@ export default {
   }
 }
 </script>
+
+<template>
+  <Banner />
+  <QuickSect />
+  <Brands />
+  <NewsProducts />
+  <Catalog />
+  <Benefits />
+  <news />
+  <Contacts />
+  <FooterForm />
+</template>
 
 <style>
 
