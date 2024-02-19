@@ -9,58 +9,31 @@ export default {
   },
   data() {
     return {
-      show: false,
-      menu: false,
-      formResult: false,
+      show: this.$store.state.bg,
+      menu: this.$store.state.menu,
       formResultText: '',
     }
   },
   methods: {
-    openMenu() {
-      // this.show = true;
-      // this.menu = true;
-      console.log(1)
-    },
     closeModal() {
-      this.$emitter.emit('open-menu', {
-        bg: false,
-        menu: false,
-      });
-      this.$emitter.emit('open-res', {
-        bg: false,
-        formResult: false,
-      });
+      this.$store.commit('openMenu', false);
+      this.$store.commit('openBg', false);
+      this.$store.commit('openSuccess', false);
       document.body.style.overflow = 'auto';
     }
   },
-  created() {
-    this.$emitter.on('open-menu', (evt) => {
-      this.show = evt.bg;
-      this.menu = evt.menu;
-      if (evt.bg) {
-        document.body.style.overflow = 'hidden';
-      } else {
-        document.body.style.overflow = 'auto';
-      }
-    });
-    this.$emitter.on('open-res', (evt) => {
-      this.show = evt.bg;
-      this.formResult = evt.check;
-      this.formResultText = evt.text;
-      if (evt.bg) {
-        document.body.style.overflow = 'hidden';
-      } else {
-        document.body.style.overflow = 'auto';
-      }
-    })
+  computed: {
+    bgShow() {
+      return this.$store.getters.getBg;
+    }
   },
 }
 </script>
 
 <template lang="pug">
-  Menu( :menu="menu" )
+  Menu
   FormRes( :check="formResult", :text="formResultText" )
-  .modal-bg( :class="{ active: show }", @click="closeModal" )
+  .modal-bg( :class="{ active: bgShow }", @click="closeModal" )
 </template>
 
 <style scoped lang="sass">

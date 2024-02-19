@@ -11,12 +11,10 @@ export default {
   methods: {
     submit(e) {
       if (this.privacy) {
-        console.log('Success');
-        this.$emitter.emit('open-res', {
-          text: 'Благодарим за подписку',
-          bg: true,
-          check: true,
-        })
+        this.$store.commit('openSuccess', true);
+        this.$store.commit('openBg', true);
+        this.$store.commit('changeSuccessTxt', 'Благодарим за подписку')
+        document.body.style.overflow = 'hidden';
       } else {
         this.checkPrivacy = false;
       }

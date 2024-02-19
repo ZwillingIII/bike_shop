@@ -65,7 +65,7 @@ export default {
       logo: Logo,
       favoriteCount: true,
       cardCount: false,
-      route: false
+      route: false,
     }
   },
   async created() {
@@ -79,10 +79,9 @@ export default {
   },
   methods: {
     showMenu() {
-      this.$emitter.emit('open-menu', {
-        menu: true,
-        bg: true
-      })
+      this.$store.commit('openMenu', true);
+      this.$store.commit('openBg', true);
+      document.body.style.overflow = 'hidden';
     }
   }
 }

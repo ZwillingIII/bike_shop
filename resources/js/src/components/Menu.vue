@@ -6,22 +6,23 @@ export default {
       close: '/svg/close.svg',
     }
   },
-  props: [
-    'menu'
-  ],
+  computed: {
+    getMenu() {
+      return this.$store.getters.getMenu;
+    }
+  },
   methods: {
     closeModal() {
-      this.$emitter.emit('open-menu', {
-        menu: false,
-        bg: false
-      })
+      this.$store.commit('openMenu', false);
+      this.$store.commit('openBg', false);
+      document.body.style.overflow = 'auto';
     }
   }
 }
 </script>
 
 <template lang="pug">
-.menu( :class="{ active: menu }" )
+.menu( :class="{ active: getMenu }" )
   .menu-wrap
     .menu-close
       img( :src="close", @click="closeModal" )

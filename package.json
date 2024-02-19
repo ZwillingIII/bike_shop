@@ -13,7 +13,6 @@
     },
     "dependencies": {
         "@vitejs/plugin-vue": "^5.0.2",
-        "mitt": "^3.0.1",
         "pug": "^3.0.2",
         "sass": "^1.69.7",
         "swiper": "^11.0.5",
@@ -22,6 +21,7 @@
         "vue": "^3.4.5",
         "vue-router": "^4.2.5",
         "vue-yandex-maps": "^1.1.0",
-        "vue3-marquee": "^4.2.0-beta.1"
+        "vue3-marquee": "^4.2.0-beta.1",
+        "vuex": "^4.1.0"
     }
 }

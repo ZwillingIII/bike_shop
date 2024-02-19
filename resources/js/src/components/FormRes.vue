@@ -1,29 +1,32 @@
 <script>
 export default {
   name: "FormRes",
-  props: [
-    'check',
-    'text'
-  ],
   data() {
     return {
       img: '/svg/form-result.svg',
       close: '/svg/close.svg',
     }
   },
+  computed: {
+    open() {
+      return this.$store.getters.getSuccess;
+    },
+    text() {
+      return this.$store.getters.getSuccessTxt;
+    }
+  },
   methods: {
     closeBtn() {
-      this.$emitter.emit('open-res', {
-        bg: false,
-        formResult: false,
-      })
+      this.$store.commit('openSuccess', false);
+      this.$store.commit('openBg', false);
+      document.body.style.overflow = 'auto';
     }
   }
 }
 </script>
 
 <template lang="pug">
-.form-result( :class="{ active: check }" )
+.form-result( :class="{ active: open }" )
   .form-result__close
     img( :src="close", @click="closeBtn" )
   .form-result__img
@@ -62,6 +65,7 @@ export default {
     line-height: 1.23
     letter-spacing: 0.05em
     font-weight: 600
-    max-width: 475px
+    max-width: 515px
     text-align: center
+    text-transform: uppercase
 </style>
